@@ -1,0 +1,108 @@
+def boasVindas():
+    nome = input("Digite Seu nome: ")
+    idade = input("DIgite seua idade: ")
+    print(f"Bem Vindo {nome} voce tem {idade} Anos")
+ 
+def cadatroCompleto():
+ import locale
+ locale.setlocale(locale.LC_ALL, "Portuguese_Brazil.1252")
+ 
+ nome_completo = input("Digite seu nome completa: ")
+ idade = input("Digite Sua idade: ")
+ salario = float(input("Digite Seu salario: "))
+ salario_formatado = locale.currency(salario, grouping = True)
+ 
+ print(f"Meu nome é {nome_completo}, tenho {idade} anos e ganho {salario_formatado} por mês")
+ 
+def soma():
+   num1 = int(input("Digite o primeiro Numero: "))
+   num2 = int(input("Digite o segundo Numero: "))
+   soma = num1 + num2
+   print(soma)
+   
+def dobroFloat():
+   float1 = float(input("Digite Um valor Float: "))
+   dobro = float1 * 2
+   print(f"O dobro de {float1} é {dobro}")
+ 
+def verificadorEstudos():
+   nome = input("DIgite Seu nome: ")
+   estudo = (input("Está estudando atualmente, digite sim ou não:" ).strip().lower())
+   esta_estudando = bool
+   if estudo == "sim":
+      esta_estudando = True
+   else:
+      esta_estudando = False
+   print(f"{nome}, você esta estudando: {esta_estudando}.")
+ 
+def repetidorNumero():
+   nome = input("Digite Seu Nome: ")
+   nvezes = int(input("Digite o Numero de vezes que deseja repetir o nome: "))
+   print((nome + '\n') * nvezes)
+
+def calcularIMC():
+   print("Bem Vindo ao calculador de IMC, para calcular por favor seguir os passos.")
+   peso = float(input("Digite seu peso: "))
+   altura = float(input("Digite Sua Altura: "))
+   imc = (peso / (altura * altura))
+   print(f"Seu Imc é de: {round(imc, 2)} ")
+   if imc < 18.5:
+      print("Você esta abaixo do peso.")
+   elif imc < 25:
+      print("Você esta com peso normal.")
+   elif imc < 30:
+      print("Você esta com sobrepeso.")
+   else:
+      print("Você esta com obbesidade.")
+
+def calcularHorapaga():
+   print("Bem Vindo ao calculador de Hora paga.")
+   qnthora = int(input("Por favor insira a quantidade de horas: "))
+   vlrhora = int(input("Por favor insira o valor da hora: "))
+   pgmttotal = qnthora * vlrhora
+   print(f"Foram trabalhadas {qnthora} horas, á R${round(vlrhora, 2)} pago por hora.")
+   print(f"O pagamento total é: R${round(pgmttotal, 2)}.")
+
+def calcularDesconto():
+   print("Bem Vindo a calculadora de Descontos.")
+   vlrproduto = float(input("Por favor, digite o valor do produto: "))
+   desconto = input("Por favor, insira a porcentagem de desconto (ex: 10%): ")
+   prctdesconto = float(desconto.replace("%"," ").strip())
+   vlrfinal = (vlrproduto * (prctdesconto / 100))
+   print(f"O valor Final é: R${round(vlrfinal, 2)} ")
+
+print("Bem Vindo, para ver exercicios insira: \n" \
+"Exercicio 1 (1)\n" \
+"Exercicio 2 (2)\n" \
+"Exercicio 3 (3)\n" \
+"Exercicio 4 (4)\n" \
+"Exercicio 5 (5)\n" \
+"Exercicio 6 (6)\n" \
+"Exercicio 7 (7)\n" \
+"Exercicio 8 (8)\n" \
+"Exercicio 9 (9): ")
+seletor = int(input("Insira o seletor: "))
+if seletor == 1:
+   boasVindas()
+elif seletor == 2:
+   cadatroCompleto()
+elif seletor == 3:
+   soma()
+elif seletor == 4:
+   dobroFloat()
+elif seletor == 5:
+   verificadorEstudos()
+elif seletor == 6:
+   repetidorNumero()
+elif seletor == 7:
+   calcularIMC()
+elif seletor == 8:
+   calcularHorapaga()
+elif seletor == 9:
+   calcularDesconto()
+else: 
+   print("Por favor digite um número valido")
+
+    
+
+ 
