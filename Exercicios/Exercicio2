@@ -68,8 +68,11 @@ def calcularDesconto():
    vlrproduto = float(input("Por favor, digite o valor do produto: "))
    desconto = input("Por favor, insira a porcentagem de desconto (ex: 10%): ")
    prctdesconto = float(desconto.replace("%"," ").strip())
-   vlrfinal = (vlrproduto * (prctdesconto / 100))
-   print(f"O valor Final é: R${round(vlrfinal, 2)} ")
+   vlrdesconto = vlrproduto * (prctdesconto / 100)
+   vlrfinal = (vlrproduto - prctdesconto )
+   print(f"\nValor do produto: R${vlrproduto:.2f}")
+   print(f"Desconto de {prctdesconto:.1f}%: R${vlrdesconto:.2f}")
+   print(f"Valor final com desconto: R${vlrfinal:.2f}")
 
 print("Bem Vindo, para ver exercicios insira: \n" \
 "Exercicio 1 (1)\n" \
