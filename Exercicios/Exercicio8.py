@@ -49,18 +49,36 @@ def exercicio8():
         if i % 2 == 1:
             print(i)
         i += 1
-def exercicio9(): 
+def exercicio9():
     vogais = "aeiouAEIOU"
     contagem_vogais = {}
     i = 0
+    texto = input("Digite um texto: ")
+
     while i < len(texto):
         letra = texto[i]
         if letra in vogais:
             contagem_vogais[letra] = contagem_vogais.get(letra, 0) + 1
         i += 1
-    print("Vogais encotradas e suas quantidade: ")
-    for vogal, quantidade in contagem_vogais.item():
+
+    print("Vogais encontradas e suas quantidades:")
+    for vogal, quantidade in contagem_vogais.items():
         print(f"{vogal}: {quantidade}")
+
+def exercicio10():
+    lista_compras =  []
+    
+    while True:
+        item = str(input("Digite os itens na lista ou digite sair para sair: "))
+        if item.lower() == "sair":
+            break
+        lista_compras.append(item)
+    print("\nSua lista de compras:")
+    for i, item in enumerate(lista_compras, 1):
+         print(f"{i}. {item}")
+    
+
+        
 
 
         
@@ -75,7 +93,9 @@ seletor = int(input("Digite O numero do exercicio desejado,\n "
 "Exercicio 5 (5)\n"
 "Exercicio 6 (6)\n"
 "Exercicio 7 (7)\n"
-"Exercicio 8 (8):"))
+"Exercicio 8 (8)\n"
+"Exercicio 9 (9)\n"
+"Exercicio 10 (10):\n "))
 
 if seletor == 1:
     exercicio1()
@@ -93,3 +113,7 @@ elif seletor == 7:
     exercicio7()
 elif seletor == 8:
     exercicio8()
+elif seletor == 9:
+    exercicio9()
+elif seletor == 10:
+    exercicio10()
